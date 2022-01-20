@@ -1,4 +1,4 @@
-package com.example.recyclerspace
+package com.example.recyclerspace.models
 
 data class CarModel(
     val manufacturer:String,

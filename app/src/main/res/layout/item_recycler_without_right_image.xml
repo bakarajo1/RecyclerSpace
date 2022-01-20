@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_margin="10dp"
+    android:layout_height="@dimen/dp100"
+    android:layout_margin="@dimen/dp10"
+    app:cardBackgroundColor="#EF5321"
     android:id="@+id/cardView"
 
     >
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/rightImage"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="70dp"
+        android:layout_width="@dimen/dp70"
+        android:layout_height="@dimen/dp70"
+        android:layout_marginEnd="@dimen/dp70"
         android:layout_gravity="end|center"
         android:background="@color/black"/>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/leftImage"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="70dp"
+        android:layout_width="@dimen/dp70"
+        android:layout_height="@dimen/dp70"
+        android:layout_marginStart="@dimen/dp70"
         android:layout_gravity="start|center"
         android:src="@mipmap/ic_launcher_round"/>
 

@@ -1,23 +1,21 @@
 package com.example.recyclerspace
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.recyclerspace.databinding.ItemRecyclerWithBothImagesBinding
 import com.example.recyclerspace.databinding.ItemRecyclerWithoutLeftImageBinding
 import com.example.recyclerspace.databinding.ItemRecyclerWithoutRightImageBinding
-import com.example.recyclerspace.databinding.ItemRecylerType1Binding
+import com.example.recyclerspace.models.CarModel
 
-class UserAdapter(private val userList:MutableList<CarModel>,val longClick: LongClick): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class UserAdapter(private val userList:MutableList<CarModel>, val longClick: LongClick): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
     class UserWithoutRightImageVH(private val binding:ItemRecyclerWithoutRightImageBinding):RecyclerView.ViewHolder(binding.root) {
 
-        fun onBind(carModel: CarModel,longClick: LongClick) {
+        fun onBind(carModel: CarModel, longClick: LongClick) {
             with(binding) {
 
                 Glide.with(leftImage.context).load(carModel.imageUrl1).into(leftImage)
@@ -39,7 +37,7 @@ class UserAdapter(private val userList:MutableList<CarModel>,val longClick: Long
 
     class UserWithBothImageVH(private val binding:ItemRecyclerWithBothImagesBinding):RecyclerView.ViewHolder(binding.root) {
 
-        fun onBind(carModel: CarModel,longClick: LongClick) {
+        fun onBind(carModel: CarModel, longClick: LongClick) {
             with(binding) {
                 Glide.with(leftImage.context).load(carModel.imageUrl1).into(leftImage)
                 Glide.with(rightImage.context).load(carModel.imageUrl2).into(rightImage)
@@ -58,7 +56,7 @@ class UserAdapter(private val userList:MutableList<CarModel>,val longClick: Long
     }
     class UserWithoutLeftImageVH(private val binding:ItemRecyclerWithoutLeftImageBinding):RecyclerView.ViewHolder(binding.root) {
 
-        fun onBind(carModel: CarModel,longClick: LongClick) {
+        fun onBind(carModel: CarModel, longClick: LongClick) {
             with(binding) {
                 Glide.with(rightImage.context).load(carModel.imageUrl2).into(rightImage)
                 cardView.setOnClickListener {

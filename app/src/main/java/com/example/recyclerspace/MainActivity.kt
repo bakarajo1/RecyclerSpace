@@ -3,9 +3,9 @@ package com.example.recyclerspace
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recyclerspace.databinding.ActivityMainBinding
+import com.example.recyclerspace.models.CarModel
 
 class MainActivity : AppCompatActivity(),LongClick {
 
@@ -21,14 +21,16 @@ class MainActivity : AppCompatActivity(),LongClick {
     }
 
     fun init() {
-       val userList = mutableListOf<CarModel>(CarModel(
+       val userList = mutableListOf<CarModel>(
+           CarModel(
            "nissan",
             "teana",
              1999,
             "https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png",
             "https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png",
 
-        ))
+        )
+       )
 
         userAdapter = UserAdapter(userList,this)
         initRecyclerView()
@@ -64,7 +66,7 @@ class MainActivity : AppCompatActivity(),LongClick {
         with(binding){
 
             if (yearEditText.text?.isNotBlank()==true && manufacturerEditText.text?.isNotBlank()==true && modelEditText.text?.isNotBlank()==true){
-                val userModel=CarModel(
+                val userModel= CarModel(
                     manufacturerEditText.text.toString(),
                     modelEditText.text.toString(),
                     yearEditText.text.toString().toInt(),

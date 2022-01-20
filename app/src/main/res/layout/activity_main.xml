@@ -10,7 +10,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerMain"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zero_dim"
         android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/manufacturerEditText"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,30 +19,38 @@
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/manufacturerEditText"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="10dp"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginHorizontal="@dimen/dp40"
+        android:layout_marginVertical="@dimen/dp10"
+        android:background="@drawable/rounded_corner"
         android:hint="@string/manufacturer"
         app:layout_constraintBottom_toTopOf="@+id/modelEditText" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:background="@drawable/rounded_corner"
+        android:layout_height="@dimen/dp60"
         android:hint="@string/model"
-        android:layout_margin="10dp"
-        android:id="@+id/modelEditText"
+        android:layout_marginHorizontal="@dimen/dp40"
+        android:layout_marginVertical="@dimen/dp10"        android:id="@+id/modelEditText"
         app:layout_constraintBottom_toTopOf="@+id/yearEditText" />
     <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/dp60"
+        android:background="@drawable/rounded_corner"
         android:hint="@string/year"
         android:inputType="number"
-        android:layout_margin="10dp"
-        android:id="@+id/yearEditText"
+        android:layout_marginHorizontal="@dimen/dp40"
+        android:layout_marginVertical="@dimen/dp10"        android:id="@+id/yearEditText"
         app:layout_constraintBottom_toTopOf="@+id/addUserButton" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/dp60"
+        android:text="@string/add_car"
+        android:background="#EF5321"
+        android:layout_marginHorizontal="@dimen/dp20"
+        android:layout_marginVertical="@dimen/dp10"
         app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/addUserButton"/>
 
